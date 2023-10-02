@@ -1,0 +1,124 @@
+.post-card {
+    display: flex;
+    flex-direction: column;
+    background: #000000;
+    border: solid 1px #383838;
+    height: 600px;
+    width: 400px;
+    color: aliceblue;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    border: solid 1px #383838;
+    height: 700px;
+    width: 400px;
+}
+
+.creator-name{
+    font-size: 20px;
+    margin: 0 15px 0 10px;
+    font-weight: 200;
+}
+
+.created-at {
+    font-size: 15px;
+    color: #8D949E;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+}
+
+.media {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.top-section {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overlay2 {
+    background-color: rgb(0, 0, 0);
+}
+
+.overlay2-button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    justify-content: space-between;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 20px;
+}
+
+.tags {
+    color: #8D949E;
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+.title {
+    color: #d8d8d8;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.message {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 100;
+}
+
+.cardActions {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.cardActions button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+hr.horizontal {
+    margin: 50px 0;
+    color: #383838;
+    background-color: #383838;
+    border-color : #383838;
+}
+
+.like-count {
+    color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 0;
+}
+
