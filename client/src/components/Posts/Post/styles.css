@@ -6,6 +6,7 @@
     height: 600px;
     width: 400px;
     color: aliceblue;
+    cursor: pointer;
 }
 
 .card {
@@ -116,9 +117,10 @@ hr.horizontal {
 
 .like-count {
     color: white;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-top: 10px;
     width: 100%;
     margin-bottom: 0;
+    font-size: 15px;
 }
 

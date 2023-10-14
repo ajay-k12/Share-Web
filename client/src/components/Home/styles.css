@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    justify-content: end;
+    width: 70vw;
+    margin: 90px auto;
+}
+
+.posts {
+    display: flex;
+    margin-right: 400px;
+}
+
+.post-form {
+    position: fixed;
+    margin: 0;
+}

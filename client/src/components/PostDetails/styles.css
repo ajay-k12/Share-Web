@@ -1,0 +1,76 @@
+.details-main-container {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.details-container {
+    margin-top: 100px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+    height: 500px;
+    border: solid 1px #383838;
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+.left-side-det {
+    display: flex;
+    align-items: center;
+    height: 500px;
+    width: 600px;
+    justify-content: center;
+    border: solid 1px #383838;
+    border-radius: 10px;
+}
+
+.det-img {
+    left: 0%;
+    height: 500px;
+    width: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.right-side-det {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 500px;
+    width: 450px;
+    /* border: solid 1px #383838; */
+}
+
+.det-title {
+    font-size: 50px;
+    margin: 0;
+}
+
+ .det-tags {
+    color: #8D949E;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 21px;
+}
+
+.det-message {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.det-name {
+    margin: 10px 0;
+    font-size: 21px;
+}
+
+.det-time {
+    color: #8D949E;
+    margin: 0px;
+    font-size: 15px;
+}

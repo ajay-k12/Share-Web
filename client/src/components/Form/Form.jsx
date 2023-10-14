@@ -5,8 +5,8 @@ import { createPost, updatePost } from '../../actions/posts'
 import './styles.css'
 
 const Form = ({currentId, setCurrentId}) => {
+  const user = JSON.parse(localStorage.getItem('profile'))
   const [postData, setPostData] = useState({
-    creator: '',
     title: '',
     message: '',
     tags: '',
@@ -26,10 +26,10 @@ const Form = ({currentId, setCurrentId}) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     if(currentId){
-      dispatch(updatePost(postData, currentId))
+      dispatch(updatePost({...postData, name: user?.result?.name}, currentId))
     }
     else{
-      dispatch(createPost(postData))
+      dispatch(createPost({...postData, name: user?.result?.name}))
     }
     handleClear()
   }
@@ -37,7 +37,6 @@ const Form = ({currentId, setCurrentId}) => {
   const handleClear = () => {
     setCurrentId(null)
     setPostData({
-      creator: '',
       title: '',
       message: '',
       tags: '',
@@ -45,17 +44,16 @@ const Form = ({currentId, setCurrentId}) => {
     })
   }
 
+  // if(!user?.result?.name){
+  //   return (
+  //     //show a card telling please login
+  //   )
+  // }
+
   return (
     <div className='paper'>
     <p className='form-title'>{currentId ? 'Edit' : 'Write'} a Post</p>
       <form autoComplete='off' noValidate className='root form' onSubmit={handleSubmit}>
-        <input
-         name='creator' 
-         label='Creator'
-         value={postData.creator}
-         onChange={handleChange}
-         placeholder='Creator'
-        />
         <input
          name='title' 
          label='Title'

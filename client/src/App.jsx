@@ -1,34 +1,25 @@
-import React, { useEffect, useState } from 'react'
-import image from './images/night.jpg'
-import Posts from './components/Posts/Posts'
-import Form from './components/Form/Form'
-import { useDispatch } from 'react-redux'
-import { getPosts } from './actions/posts'
+import Navbar from './components/Navbar/Navbar'
+import Home from './components/Home/Home'
+import Auth from './components/Auth/Auth'
+import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom'
 import './index.css'
+import PostDetails from './components/PostDetails/PostDetails'
 
 const App = () => {
-  const [currentId, setCurrentId] = useState(null)
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(getPosts())
-  }, [])
+  const user = JSON.parse(localStorage.getItem('profile'))
 
   return (
-    <div className='main-container'>
-      <div className='appBar'>
-        <img className='image' src={image} alt='night'/>
-        <p className='heading'>ShareWev</p>
+    <BrowserRouter>
+      <div className='main-container'>
+        <Navbar />
+        <Routes>
+          <Route path='/' exact element={<Navigate to='/posts' />}  />
+          <Route path='/posts' exact element={<Home />} />
+          <Route path='/posts/:id' exact element={<PostDetails />} />
+          <Route path='/auth' exact element={user ? <Navigate to='/posts'/> : <Auth />} />
+        </Routes>
       </div>
-      <div className='container'>
-        <div className='posts'>
-          <Posts setCurrentId={setCurrentId} />
-        </div>
-        <div className='post-form' >
-          <Form currentId={currentId} setCurrentId={setCurrentId} />
-        </div>
-      </div>
-    </div>
+    </BrowserRouter>
   )
 }
 
